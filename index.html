@@ -7,32 +7,72 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #101820;
+      background-image: url('New_0022_github.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
       color: #E6E6E6;
       text-align: center;
       margin: 0;
       padding: 0;
+      /* lapisan transparan agar teks tetap terbaca */
+      position: relative;
     }
+
+    /* overlay halus untuk readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+
     h1 {
       font-size: 2.5em;
       margin-top: 80px;
       color: #82d8c8;
+      text-shadow: 0 0 10px rgba(130, 216, 200, 0.4);
     }
+
     p {
       font-size: 1.1em;
       color: #c8d6e5;
       width: 80%;
       margin: 20px auto;
       line-height: 1.6;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     }
+
     a {
       color: #ffd166;
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
+
+    a:hover {
+      color: #fff3b0;
+    }
+
     footer {
       margin-top: 60px;
       font-size: 0.9em;
-      color: #6c757d;
+      color: #a1a1a1;
+    }
+
+    /* efek responsif */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+        margin-top: 60px;
+      }
+      p {
+        font-size: 1em;
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -40,9 +80,13 @@
   <h1>🌿 Green Melody Beats</h1>
   <p>A calm digital space where lo-fi melodies and visuals meet.<br>
   Tune in. Relax. Let your creativity flow.</p>
-  <p>🎧 <a href="https://instagram.com/greenmelodybeats" target="_blank">Instagram</a> ·
-     <a href="https://substack.com/@greenmelodybeats" target="_blank">Substack</a> ·
-     <a href="https://www.youtube.com/@GreenMelodyChill" target="_blank">YouTube</a></p>
+
+  <p>🎧 
+    <a href="https://instagram.com/greenmelodybeats" target="_blank">Instagram</a> ·
+    <a href="https://substack.com/@greenmelodybeats" target="_blank">Substack</a> ·
+    <a href="https://www.youtube.com/@GreenMelodyChill" target="_blank">YouTube</a>
+  </p>
+
   <footer>© 2025 Green Melody Beats</footer>
 </body>
 </html>
